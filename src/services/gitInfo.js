@@ -1,10 +1,10 @@
 const owner = "22mukeshk";
 const repositoryPath = "vueProject";
-const accessToken = "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";
+const accessToken = "";
 
 export async function getCommitHistory(){
         try {
-                const response = await fetch(`https://api.github.com/repos/${owner}/${repositoryPath}/commits`,{
+                const response = await fetch(`https://api.github.com/repos/${owner}/${repositoryPath}/commit`,{
                         headers:{
                                 Authorization:`token ${accessToken}` 
                         }
