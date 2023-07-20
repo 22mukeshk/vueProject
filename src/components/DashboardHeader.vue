@@ -4,6 +4,8 @@
 </template>
 
 <script>
+import {getCommitHistory} from '@/services/gitInfo';
+
 export default{
     name:"DashboardHeader",
 
@@ -11,6 +13,11 @@ export default{
         handleClick(){
            this.$emit('handleClickParent');
         }
+    },
+    created(){
+     let gitMessage = getCommitHistory();
+     console.log("gitMessage",gitMessage);
+        
     }
 }
 </script>
